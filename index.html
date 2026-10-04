@@ -1,21 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PosterMaker</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <h1>PosterMaker</h1>
+    <header class="site-header">
+        <h2>PosterMaker</h2>
 
-    <p>Create a poster you'll love.</p>
+        <nav>
+            <a href="#templates">Templates</a>
+            <a href="#editor">Create</a>
+        </nav>
+    </header>
 
-    <button>Start Creating</button>
+
+    <main>
+
+        <section class="welcome">
+
+            <p class="eyebrow">SIMPLE • CREATIVE • FUN</p>
+
+            <h1>Create a poster you'll love.</h1>
+
+            <p>
+                Choose a template, write your message,
+                choose a colour and make it your own.
+            </p>
+
+            <button id="startButton">
+                Start Creating
+            </button>
+
+        </section>
+
+
+        <section id="templates">
+
+            <h2>Choose a template</h2>
+
+            <div class="template-grid">
+
+                <button class="template-card"
+                    data-template="celebration">
+
+                    🎉
+                    <strong>Celebration</strong>
+
+                </button>
+
+
+                <button class="template-card"
+                    data-template="holiday">
+
+                    🎄
+                    <strong>Holiday</strong>
+
+                </button>
+
+
+                <button class="template-card"
+                    data-template="funny">
+
+                    😂
+                    <strong>Funny</strong>
+
+                </button>
+
+
+                <button class="template-card"
+                    data-template="garden">
+
+                    🌷
+                    <strong>Garden</strong>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="editor">
+
+            <h2>Create your poster</h2>
+
+            <label for="posterText">
+                Your message
+            </label>
+
+            <textarea
+                id="posterText"
+                rows="4"
+                placeholder="Type your message..."
+            >Celebrate the moment!</textarea>
+
+
+            <h3>Choose a colour</h3>
+
+            <div class="colour-options">
+
+                <button class="colour-button selected"
+                    data-colour="pink">
+                    🌸
+                </button>
+
+                <button class="colour-button"
+                    data-colour="blue">
+                    🌊
+                </button>
+
+                <button class="colour-button"
+                    data-colour="green">
+                    🌿
+                </button>
+
+                <button class="colour-button"
+                    data-colour="yellow">
+                    ☀️
+                </button>
+
+                <button class="colour-button"
+                    data-colour="black">
+                    🥾
+                </button>
+
+            </div>
+
+
+            <label for="fontSize">
+                Text size
+            </label>
+
+            <input
+                type="range"
+                id="fontSize"
+                min="24"
+                max="72"
+                value="42"
+            >
+
+
+            <div class="poster poster-pink">
+
+                <div id="posterDecoration">
+                    🌸
+                </div>
+
+                <div id="posterMessage">
+                    Celebrate the moment!
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        PosterMaker • Simple. Creative. Fun.
+    </footer>
+
+
     <script src="js/app.js"></script>
 
 </body>
+
 </html>
